@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <script type="text/javascript" src="script.js" defer></script>
+    <title>N. B. Hankes</title>
+  </head>
+  <body onload="getDevToArticles()" >
+    <div class="screen-1">
+        <h1>N. B. Hankes</h1>
+        <h2>My Work</h2>
+        <div class"flex-container">
+            <div class="flex-item">
+                <p>Full Stack App</p>
+                
+                <p>As a professional chemist, I wanted to solve a real world problem
+                    while learning to code. This project computes dimensional analysis 
+                    calculations. Let's take a look below to see what it does and how it works:
+                </p>
+
+                <iframe width="100%" height="300px" src="https://www.youtube.com/embed/G74zKmIrcdY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+                <div class="flex-container">
+                    <p>Frontend:</p>
+                    <img class="icon" src="/assets/gatsby.png"/>
+                    <img class="icon" src="/assets/graphql.png"/>
+                    <img class="icon" src="/assets/netlify.png"/>
+
+                </div>
+                <div class="flex-container">
+                    <p>Backend:</p>
+                    <img class="icon" src="/assets/nodejs_logo.png"/>
+                    <img class="icon" src="/assets/mongodb.png"/>
+                    <img class="icon" src="/assets/express.png"/>
+                    <img class="icon" src="/assets/apollo.png"/>
+                    <img class="icon" src="/assets/heroku.png"/>
+                 </div>
+
+                 <p>
+
+                 </p>
+
+                <div class="button-container">
+                    <p>What is dimensional anlysis? Let's look at this fun 
+                        example, so you can appreciate some of what the software does 
+                        behind the scenes.
+                    </p>
+                    <button class="activate">Learn More</button>
+                </div>
+                <div class="modal">
+                    <div class="modal-content">
+                        <span class="close-button">&times;</span>
+
+
+                        <p>Ever wonder how many skittles fit in an Olympic size swimming pool?</p>
+                        <p>Yeah, I know. Me too! </p>
+                        <p>With the help of dimensional analysis, we can find an answer.</p>
+                        <p>But first we need to know a couple things.</p>
+                        <p>1. The volume of a Skittle</p>
+                        <p>2. The volume of an Olymic sized swimmming pool.</p>
+                        <p>Let's say a single Skittle displaces 4 milliliters of water in a graduated cylinder.</p>
+                        <p>And Google is so kind as to tell me that an Olympic sized swimming pool holds 2,500,000 liters.</p>
+                        <p>Each of those last two statment is a conversion factor. And dimensional analysis makes calculations using these types of conversion factors:</p>
+                
+                        <div class="flex-container">
+                
+                            <div class="conv-factor">
+                                <div class="num"><p>1 Skittle</p></div>
+                                <div class="denom"><p>4 mL</p></div>
+                            </div>
+
+                            <div class="conv-factor">
+                                <div class="num"><p>2,500,000 liters</p></div>
+                                <div class="denom"><p>1 Olympic Pool</p></div>
+                            </div>
+                
+                        </div>
+
+                        <p>And since units found in both the numerator (top) and denominator (bottom) cancel one another out, we'll add another conversion factor to cancel out the milliliters and liters units. And then we will multiply across and divide to find our answer.</p>
+
+                        <div class="flex-container">
+                
+                            <div class="conv-factor">
+                                <div class="num"><p>1 Skittle</p></div>
+                                <div class="denom"><p>4 milliliters</p></div>
+                            </div>
+                
+                            <p>*</p>
+
+                            <div class="conv-factor">
+                                <div class="num"><p>1,000 milliliters</p></div>
+                                <div class="denom"><p> liter</p></div>
+                            </div>
+
+                            <p>*</p>
+
+                            <div class="conv-factor">
+                                <div class="num"><p>2,500,000 liters</p></div>
+                                <div class="denom"><p>1 Olympic Pool</p></div>
+                            </div>
+
+                            <p>=</p>
+
+                            <div class="conv-factor">
+                                <div class="num"><p>625,000,000 Skittles</p></div>
+                                <div class="denom"><p>1 Olympic Pool</p></div>
+                            </div>
+                
+                        </div>
+                    </div>
+                </div>
+
+                <p>
+                Unlike current online conversion tools, this 
+                program allows users to generate and save their own conversion factors,
+                which would make this application useful for laboratories, researchers, and many others in engineering 
+                and the sciences.
+                </p>
+
+                <p>
+                The calculator is functional, and I plan to add addtional functionality in the future, 
+                such as authorization and authentication, billing, and more tooling for researchers to 
+                save calculations and collaborate on projects.
+                </p>
+
+                <p>Live Demo:</p> <a href="https://dimensional-analysis-app.netlify.app/">https://dimensional-analysis-app.netlify.app/</a>
+                
+                <p>The backend is hosted on a free Dyno via Heroku. The free tier results in longer load times since infrequently used apps are removed from the server memory to save resources. Learn more about Heroku's free tier strategy <a href="https://devcenter.heroku.com/articles/dynos#dyno-sleeping">here</a></p> 
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="screen-2"></div>
+        <h2>My Experience</h2>
+        <div class="flex-container">
+
+            <div class="flex-item">
+                <img src="assets/vetswhocode.png" alt="vets who code log">
+               <p>Vets Who Code bootcamp March 2020 Cohort</p>
+               <p>Vets Who Code is a non-profit dedicated 
+                   to filling the nations technical skills 
+                   gap with America’s best.
+                </p>
+                <p>In this program, I worked mostly frontend tooling:</p>
+                <li>
+                    <ul>HTML</ul>
+                    <ul>CSS</ul>
+                    <ul>JavaScript</ul>
+                    <ul>Computer Science Fundamentals</ul>
+                    <ul>Gatsby JS</ul>
+                    <ul>React</ul>
+                    <ul>And much more.</ul>
+                </li>
+             </div>
+
+            <div class="flex-item">
+                <p>Vets Who Code Tutorial Team Lead Volunteer</p> 
+                <p>July 2020-Present.</p>
+                <p>For this position, I've coordinated with a small 
+                 team to write tutorials for CSS, HTML, JavaScript,
+                 and more. 
+                </p>
+                <p>I personally wrote this <a href="https://github.com/nbhankes/css-tutorial">CSS tutorial</a>.</p>
+            </div>
+ 
+            <div class="flex-item">
+                <p>Freelance WordPress Developer</p>
+                <p>In my work as a freelance WordPress developer, 
+                    I've saved my clients time and headaches by creating 
+                    custom default styling, so they no longer need to 
+                    style each componenet individually.
+                </p>
+                <p>I've accomplished this by customizing themes, adding 
+                    custom CSS, and communicating frequently with my clients
+                    to ensure they were satisfied with their website design.
+                </p>
+            </div>
+
+            <div class="flex-item">
+                <p>Open Source Contributor</p>
+                <p>I've made open source contributions to Vets Who Code and Apollo GraphQL.</p>
+                
+                <p>
+                    On the Vets Who Code repo, there was an issue stating that the text in the header was too small and lacked contrast. You can view my pull request <a href="https://github.com/Vets-Who-Code/vets-who-code-app/pull/191">here</a>.
+                </p>
+
+                <p>
+                    On the Vets Who Code repo, there was an issue stating that the text in the header was too small and lacked contrast. You can view my pull request <a href="https://github.com/apollographql/apollo/pull/948">here</a>.
+                </p>
+                
+            </div>
+
+            <div class="flex-container" id="res"></div>
+        </div>
+    </div>
+    <div class="screen-3">
+        <h2>Contact</h2>
+        <div class"flex-container">
+    <!-- Form from tutorial: https://www.youtube.com/watch?v=GMXFMVg5E4U -->
+            
+               
+              <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+              action="https://script.google.com/macros/s/AKfycbxzgHXGBsdZV0tWaCWtCfGNWA4tEakn0NIs5YIB/exec">
+                <!-- change the form action to your script url -->
+            
+                <div class="form-elements">
+                  <fieldset class="pure-group">
+                    <label for="name">Name: </label>
+                    <input id="name" name="name" placeholder="Ron Burgundy" />
+                  </fieldset>
+            
+                  <fieldset class="pure-group">
+                    <label for="message">Message: </label>
+                    <textarea id="message" name="message" rows="10"
+                    placeholder="I have many leather-bound books and my apartment smells of rich mahogany."></textarea>
+                  </fieldset>
+            
+                  <fieldset class="pure-group">
+                    <label for="email"><em>Your</em> Email Address:</label>
+                    <input id="email" name="email" type="email" value=""
+                    required placeholder="ron@channel4.com"/>
+                    <span class="email-invalid" style="display:none">
+                      Must be a valid email address</span>
+                  </fieldset>
+            
+            
+                  <button> Send</button>
+                </div>
+            
+                <!-- Customise the Thankyou Message People See when they submit the form: -->
+                <div class="thankyou_message" style="display:none;">
+                  <h2><em>Thanks</em> for contacting us!
+                    We will get back to you soon!</h2>
+                </div>
+            
+              </form>
+            
+              <!-- Submit the Form to Google Using "AJAX" -->
+              <script data-cfasync="false" type="text/javascript"
+              src="form-submission-handler.js"></script>
+            <!-- END -->
+        </div>
+
+    </div>
+
+    <div class="theme-switch-wrapper">
+      <label class="theme-switch" for="checkbox">
+        <input type="checkbox" id="checkbox" />
+        <div class="slider round"></div>
+      </label>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  </body>
+</html>
