@@ -5,11 +5,31 @@
 }
 
 :root {
+  --glass: 119, 188, 228;
+  --gs-1: rgb(234, 234, 236);
+  --gs-2: rgb(191, 191, 197);
+  --gs-3: rgb(137, 137, 148);
+  --gs-4: rgb(97, 97, 107);
+  --gs-5: rgb(58, 58, 64);
+  --gs-6: rgb(29, 29, 32);
+  --prm-1: rgb(203, 231, 246);
+  --prm-2: rgb(119, 188, 228);
+  --prm-3: rgb(51, 154, 215);
+  --prm-4: rgb(30, 108, 153);
+  --prm-5: rgb(20, 72, 102);
+  --prm-6: rgb(10, 36, 51);
+  --acc-1: rgb(248, 211, 160);
+  --acc-2: rgb(239, 150, 26);
+  --acc-3: rgb(229, 140, 16);
+  --acc-4: rgb(114, 70, 8);
+  --acc-5: rgb(114, 70, 8);
+  --acc-6: rgb(57, 35, 4);
   --background: white;
   --header: gray;
   --card: white;
   --text: black;
   --accent: purple;
+  --background-image: url(/assets/Radiant-Gradient.svg);
 }
 
 [data-theme="dark"] {
@@ -18,13 +38,13 @@
   --card: #283c53;
   --text: white;
   --accent: salmon;
+  --background-image: url(/assets/Radiant-Gradient-Dark.svg);
 }
 
 html {
-  font-size: clamp(12px, 14px, 16px);
-  width: 400px;
+  font-size: clamp(12px, 18px, 24px);
   margin: 0 auto;
-  background-color: var(--background);
+  background-image: var(--background-image);
   color: var(--text);
 }
 
@@ -34,7 +54,6 @@ h3,
 h4,
 h5,
 h6 {
-  background-color: var(--header);
   margin: 0;
   height: 4vh;
   padding-top: 1.5vh;
@@ -47,16 +66,19 @@ h6 {
   align-items: center;
   align-content: space-around;
   flex-wrap: wrap;
-  width: 100%;
+  margin: 1rem 10%;
 }
 
 .flex-item {
   overflow: auto;
-  background-color: var(--card);
+  background-color: rgba(var(--glass), 0.25);
+  margin: 1rem auto;
+  padding: 1rem 1rem;
+  border-radius: 5px;
 }
 
 a {
-  color: var(--accent);
+  color: var(--acc-2);
 }
 
 /*************************** LAYOUT **************************/
@@ -64,6 +86,22 @@ a {
 
 img {
   width: 70%;
+}
+
+.iframe-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  background: none; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
+}
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 .conv-factor {
