@@ -5,7 +5,14 @@
 }
 
 :root {
-  --glass: 119, 188, 228;
+  --text-1: 0.5rem;
+  --text-2: 1rem;
+  --text-3: 1.5rem;
+  --text-4: 2rem;
+  --text-5: 2.5rem;
+  --text-6: 3rem;
+  --text: rgb(58, 58, 64);
+  --glass: 137, 137, 148;
   --gs-1: rgb(234, 234, 236);
   --gs-2: rgb(191, 191, 197);
   --gs-3: rgb(137, 137, 148);
@@ -18,35 +25,42 @@
   --prm-4: rgb(30, 108, 153);
   --prm-5: rgb(20, 72, 102);
   --prm-6: rgb(10, 36, 51);
-  --acc-1: rgb(248, 211, 160);
-  --acc-2: rgb(239, 150, 26);
-  --acc-3: rgb(229, 140, 16);
-  --acc-4: rgb(114, 70, 8);
-  --acc-5: rgb(114, 70, 8);
-  --acc-6: rgb(57, 35, 4);
-  --background: white;
-  --header: gray;
-  --card: white;
-  --text: black;
-  --accent: purple;
-  --background-image: url(/assets/Radiant-Gradient.svg);
+  --acc-1: rgb(232, 223, 246);
+  --acc-2: rgb(197, 175, 233);
+  --acc-3: rgb(139, 95, 211);
+  --acc-4: rgb(71, 35, 128);
+  --acc-5: rgb(53, 26, 96);
+  --acc-6: rgb(27, 13, 48);
+  --link: rgb(139, 95, 211);
+  --header:rgb(71, 35, 128);
+  --background-image: url(/assets/Endless-Constellation.svg);
 }
 
 [data-theme="dark"] {
+  --text-1: 0.5rem;
+  --text-2: 1rem;
+  --text-3: 1.5rem;
+  --text-4: 2rem;
+  --text-5: 2.5rem;
+  --text-6: 3rem;
+  --link: rgb(197, 175, 233);
+  --header: rgb(197, 175, 233);
+  --glass: 29, 29, 32;
   --gs-1: rgb(29, 29, 32);
   --gs-3: rgb(97, 97, 107);
-  --header: gray;
   --card: #283c53;
   --text: rgb(191, 191, 197);
   --accent: salmon;
-  --background-image: url(/assets/Radiant-Gradient-Dark.svg);
+  --background-image: url(/assets/Endless-Constellation-Dark.svg);
 }
 
 html {
-  font-size: clamp(12px, 18px, 24px);
+  font-size: 16px;
   font-family: sans-serif;
+  min-width:300px;
+  max-width: 1400px;
   margin: 0 auto;
-  background-color: var(--gs-1);
+  background-image: var(--background-image);
   color: var(--text);
 }
 
@@ -57,9 +71,30 @@ h4,
 h5,
 h6 {
   margin: 0;
-  height: 4vh;
-  padding-top: 1.5vh;
   text-align: center;
+  color: var(--header);
+}
+
+h1 {
+  font-size: var(--text-5);
+}
+
+h2 {
+  font-size: var(--text-4);
+}
+
+h3 {
+  font-size: var(--text-3);
+}
+
+button {
+  background-color: var(--header);
+  color: var(--acc-1);
+  width: 9rem;
+  height:3rem;
+  font-weight: heavy;
+  border-radius: 5px;
+  font-size: var(--text-3);
 }
 
 .flex-container {
@@ -68,12 +103,12 @@ h6 {
   align-items: center;
   align-content: space-around;
   flex-wrap: wrap;
-  margin: 0.5rem 10%;
+  margin: var(--text-1) 5%;
 }
 
 .flex-item {
   overflow: auto;
-  background-color: rgba(var(--glass), 0.8);
+  background-color: rgba(var(--glass), 0.4);
   margin: 1rem auto;
   padding: 1rem 1rem;
   border-radius: 5px;
@@ -81,73 +116,92 @@ h6 {
 }
 
 a {
-  color: var(--acc-2);
+  color: var(--link);
 }
 
-/*************************** LAYOUT **************************/
+/*************************** Top Nav Bar **************************/
+/*************************************************************/
+.navbarContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 5.5rem;
+  background-color: rgba(var(--glass), 0.4);
+}
+
+.navbarNbhankes {
+  display: flex;
+  justify-content: end;
+  color: var(--header);
+
+  height: 100%;
+  font-family: sans-serif;
+  font-size: var(--text-5);
+  margin: var(--text-2) var(--text-2);
+}
+
+.socialMediaContainer {
+  display: flex;
+  justify-content: center;
+  margin: .5rem 1rem;
+}
+
+.fontAwesomeIcon {
+  font-size: 3em;
+  color:var(--header);
+  margin: .2rem .25em;
+}
+
+.fontAwesomeIcon:hover {
+  color:var(--acc-6); !important
+}
+
+
+/*************************** Screen 2 **************************/
 /*************************************************************/
 
-.iframe-container {
-  position: relative;
-  padding-bottom: 49.25%;
-  background: none; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
+.experience:first-child {
+  height: 90%;
 }
 
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 100%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
+/*************************** Screen 3 **************************/
+/*************************************************************/
 
-.conv-factor {
-  display: flex;
-  flex-direction: column;
-}
-
-.num {
-  text-decoration: underline;
-}
-
-.conv-factor {
-  margin: 0 1rem;
-  border: solid 0.5px;
-  border-radius: 10px;
-  padding: 0.5rem 0.5rem;
-  text-align: center;
-}
-
-.icon {
-  min-width: 4vh;
-  max-width: 4vh;
-}
-
-.pre {
-  width: 100%;
-}
-
-#cover-image {
-  width: 40%;
+.gform {
+  max-width: 25rem;
+  margin: var(--text-1) auto;
+  font-size: var(--text-3);
 }
 
 /*************************** BLOG CARDS **************************/
 /*************************************************************/
 
+.small {
+  max-width: 25rem;
+  width: 100%;
+  margin: var(--text-1) 5%;
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  width: 100%;
+}
+
 .blog-title {
-  font-size: 1.2rem;
+  font-size: var(--text-3);
   font-weight: 800;
 }
 
 .blog-description {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: var(--text-2);
+  margin-bottom: var(--text-2);
 }
 
 .blog-url {
-  color: var(--acc-3);
+  color: var(--link);
 }
 
 .blog-img {
@@ -156,6 +210,8 @@ iframe {
 
 .small {
   max-width: 25rem;
+  width: 100%;
+  margin: var(--text-1) 5%;
 }
 
 #res {
@@ -164,8 +220,8 @@ iframe {
   flex-direction: row;
 }
 
-#res:first-child {
-  max-width: 50rem;
+.small:first-child {
+  max-width: 90%;
 }
 
 /*************************** TOGGLE **************************/
@@ -235,14 +291,14 @@ input:checked + .slider:before {
 
 .button-container {
   border: solid 2px var(--text);
-  padding: 0.5rem 0.5rem;
+  padding: var(--text-1) var(--text-1);
   text-align: center;
   width: 90%;
-  margin: 1rem auto;
+  margin: var(--text-2) auto;
 }
 
 .button-container button {
-  margin: 0.5rem auto;
+  margin: var(--text-1) auto;
 }
 
 .modal {
@@ -265,14 +321,14 @@ input:checked + .slider:before {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--background);
-  padding: 1rem 1rem;
+  padding: var(--text-2) var(--text-2);
   width: 95%;
 }
 
 .close-button {
   float: right;
-  width: 2rem;
-  line-height: 2rem;
+  width: var(--text-4);
+  line-height: var(--text-4);
   text-align: center;
   cursor: pointer;
   background-color: var(--header);
@@ -292,6 +348,44 @@ input:checked + .slider:before {
 /***********************  Screen 1  ************************/
 /***********************************************************/
 
-.icon {
-  margin: 0.5rem 0.5rem;
+.iframe-container {
+  position: relative;
+  padding-bottom: 49.25%;
+  background: none; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
 }
+
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.conv-factor {
+  display: flex;
+  flex-direction: column;
+}
+
+.num {
+  text-decoration: underline;
+}
+
+.conv-factor {
+  margin: 0 1rem;
+  border: solid 0.5px;
+  border-radius: 10px;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+}
+
+.icon {
+  min-width: 4vh;
+  max-width: 4vh;
+  margin: var(--text-1) var(--text-1);
+}
+
+/************************ Screen 2 *************************/
+/***********************************************************/
