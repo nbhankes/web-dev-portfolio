@@ -45,6 +45,7 @@
   --text-6: 3rem;
   --link: rgb(197, 175, 233);
   --header: rgb(197, 175, 233);
+  --acc-1: rgb(27, 13, 48);
   --glass: 29, 29, 32;
   --gs-1: rgb(29, 29, 32);
   --gs-3: rgb(97, 97, 107);
@@ -85,6 +86,11 @@ h2 {
 
 h3 {
   font-size: var(--text-3);
+}
+
+p {
+  margin: var(--text-3) auto;
+  font-size:var(--text-3);
 }
 
 button {
@@ -155,16 +161,69 @@ a {
   color:var(--acc-6); !important
 }
 
+/***********************  Screen 1 - Projects ************************/
+/*********************************************************************/
 
-/*************************** Screen 2 **************************/
-/*************************************************************/
-
-.experience:first-child {
-  height: 90%;
+.iframe-container {
+  position: relative;
+  padding-bottom: 49.25%;
+  background: none; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
 }
 
-/*************************** Screen 3 **************************/
-/*************************************************************/
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.demo-link {
+  margin-left: var(--text-2);
+}
+
+.conv-factor {
+  display: flex;
+  flex-direction: column;
+}
+
+em {
+  text-decoration: line-through;
+}
+
+.conv-factor {
+  margin: 0 1rem;
+  border: solid 0.5px;
+  border-radius: 10px;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+}
+
+.icon {
+  min-width: 4vh;
+  max-width: 4vh;
+  margin: var(--text-1) var(--text-1);
+}
+
+
+/*************************** Screen 2 - Experience **************************/
+/****************************************************************************/
+
+.hashflag {
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.experience {
+  background-image: url(assets/hashflag_sm_bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/*************************** Screen 3 - Contact Form **************************/
+/******************************************************************************/
 
 .gform {
   max-width: 25rem;
@@ -194,6 +253,7 @@ a {
   font-size: var(--text-3);
   font-weight: 800;
 }
+
 
 .blog-description {
   margin-top: var(--text-2);
@@ -230,6 +290,9 @@ a {
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
+  position: fixed;
+  bottom: var(--text-4);
+  left: var(--text-1);
 }
 .theme-switch {
   display: inline-block;
@@ -301,6 +364,10 @@ input:checked + .slider:before {
   margin: var(--text-1) auto;
 }
 
+.equation-symbol {
+  font-size: var(--text-6);
+}
+
 .modal {
   position: fixed;
   left: 0;
@@ -308,7 +375,7 @@ input:checked + .slider:before {
   width: 100%;
   height: 100%;
   margin: 0 0;
-  background-color: #00000067;
+  background-color: rgba(var(--glass), .95);
   opacity: 0;
   visibility: hidden;
   transform: scale(1.1);
@@ -317,12 +384,14 @@ input:checked + .slider:before {
 
 .modal-content {
   position: absolute;
+  font-size: var(--text-2);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--background);
   padding: var(--text-2) var(--text-2);
   width: 95%;
+  max-width: 1400px;
 }
 
 .close-button {
@@ -332,6 +401,9 @@ input:checked + .slider:before {
   text-align: center;
   cursor: pointer;
   background-color: var(--header);
+  color: var(--acc-1);
+  font-size: var(--text-4);
+  padding-bottom: 4px;
 }
 
 .close-button:hover {
@@ -344,48 +416,3 @@ input:checked + .slider:before {
   transform: scale(1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
 }
-
-/***********************  Screen 1  ************************/
-/***********************************************************/
-
-.iframe-container {
-  position: relative;
-  padding-bottom: 49.25%;
-  background: none; /* 16:9, for an aspect ratio of 1:1 change to this value to 100% */
-}
-
-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 100%;
-  margin-left: 10%;
-  margin-right: 10%;
-}
-
-.conv-factor {
-  display: flex;
-  flex-direction: column;
-}
-
-.num {
-  text-decoration: underline;
-}
-
-.conv-factor {
-  margin: 0 1rem;
-  border: solid 0.5px;
-  border-radius: 10px;
-  padding: 0.5rem 0.5rem;
-  text-align: center;
-}
-
-.icon {
-  min-width: 4vh;
-  max-width: 4vh;
-  margin: var(--text-1) var(--text-1);
-}
-
-/************************ Screen 2 *************************/
-/***********************************************************/

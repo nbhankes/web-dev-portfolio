@@ -61,7 +61,6 @@
         <h2>My Work</h2>
         <div class"flex-container">
             <div class="flex-container">
-                <p>Full Stack App</p>
                 
                 <p>As a professional chemist, I wanted to solve a real world problem
                     while learning to code. This project computes dimensional analysis 
@@ -76,14 +75,14 @@
 
             <div class="flex-container">
                 <div class="flex-item">
-                    <p>Frontend:</p>
+                    <h3>Frontend</h3>
                     <img class="icon" src="/assets/gatsby.png"/>
                     <img class="icon" src="/assets/graphql.png"/>
                     <img class="icon" src="/assets/netlify.png"/>
 
                 </div>
                 <div class="flex-item">
-                    <p>Backend:</p>
+                    <h3>Backend</h3>
                     <img class="icon" src="/assets/nodejs_logo.png"/>
                     <img class="icon" src="/assets/mongodb.png"/>
                     <img class="icon" src="/assets/express.png"/>
@@ -110,7 +109,7 @@
                         <p>With the help of dimensional analysis, we can find an answer.</p>
                         <p>But first we need to know a couple things.</p>
                         <p>1. The volume of a Skittle</p>
-                        <p>2. The volume of an Olymic sized swimmming pool.</p>
+                        <p>2. The volume of an Olymic sized swimmming pool</p>
                         <p>Let's say a single Skittle displaces 4 milliliters of water in a graduated cylinder.</p>
                         <p>And Google is so kind as to tell me that an Olympic sized swimming pool holds 2,500,000 liters.</p>
                         <p>Each of those last two statment is a conversion factor. And dimensional analysis makes calculations using these types of conversion factors:</p>
@@ -119,43 +118,49 @@
                 
                             <div class="conv-factor">
                                 <div class="num"><p>1 Skittle</p></div>
+                                <div class="per"><p>per</p></div>
                                 <div class="denom"><p>4 mL</p></div>
                             </div>
 
                             <div class="conv-factor">
                                 <div class="num"><p>2,500,000 liters</p></div>
+                                <div class="per"><p>per</p></div>
                                 <div class="denom"><p>1 Olympic Pool</p></div>
                             </div>
                 
                         </div>
 
-                        <p>And since units found in both the numerator (top) and denominator (bottom) cancel one another out, we'll add another conversion factor to cancel out the milliliters and liters units. And then we will multiply across and divide to find our answer.</p>
+                        <p>And since units found in both the numerator (top) and denominator (bottom) cancel one another out, we'll add another conversion factor to cancel out the milliliters and liters units, leaving us with Skittles per Olympic swimming pool. And then we follow the rules of fractions by multiplying across and dividing to find our product value.</p>
 
                         <div class="flex-container">
                 
                             <div class="conv-factor">
                                 <div class="num"><p>1 Skittle</p></div>
-                                <div class="denom"><p>4 milliliters</p></div>
+                                <div class="per"><p>per</p></div>
+                                <div class="denom"><p>4 <em class=crossed-out">milliliters</em></p></div>
                             </div>
                 
-                            <p>*</p>
+                            <p class="equation-symbol">*</p>
 
                             <div class="conv-factor">
-                                <div class="num"><p>1,000 milliliters</p></div>
-                                <div class="denom"><p> liter</p></div>
+                                <div class="num"><p>1,000 <em class=crossed-out">milliliters</em></p></div>
+                                <div class="per"><p>per</p></div>
+                                <div class="denom"><p><em class=crossed-out">liter</em></p></div>
                             </div>
 
-                            <p>*</p>
+                            <p class="equation-symbol">*</p>
 
                             <div class="conv-factor">
-                                <div class="num"><p>2,500,000 liters</p></div>
+                                <div class="num"><p>2,500,000 <em class=crossed-out">liters</em></p></div>
+                                <div class="per"><p>per</p></div>
                                 <div class="denom"><p>1 Olympic Pool</p></div>
                             </div>
 
-                            <p>=</p>
+                            <p class="equation-symbol">=</p>
 
                             <div class="conv-factor">
                                 <div class="num"><p>625,000,000 Skittles</p></div>
+                                <div class="per"><p>per</p></div>
                                 <div class="denom"><p>1 Olympic Pool</p></div>
                             </div>
                 
@@ -176,7 +181,7 @@
                     save calculations and collaborate on projects.
                     </p>
 
-                    <p>Live Demo:</p> <a href="https://dimensional-analysis-app.netlify.app/">https://dimensional-analysis-app.netlify.app/</a>
+                    <h3>Live Demo: </h3><h3><a class="demo-link" href="https://dimensional-analysis-app.netlify.app/">https://dimensional-analysis-app.netlify.app/</a></h3>
                 
                     <p>The backend is hosted on a free Dyno via Heroku. The free tier results in longer load times since infrequently used apps are removed from the server memory to save resources. Learn more about Heroku's free tier strategy <a href="https://devcenter.heroku.com/articles/dynos#dyno-sleeping">here</a></p> 
                 </div>
@@ -187,11 +192,11 @@
 
     <div class="screen-2"></div>
         <h2>My Experience</h2>
-        <div class="flex-container experience">
+        <div class="flex-container">
 
-            <div class="flex-item">
-                <img src="assets/vetswhocode.png" alt="vets who code log">
-               <p>Vets Who Code bootcamp March 2020 Cohort</p>
+            <div class="flex-item experience">
+
+               <h3>Vets Who Code bootcamp March 2020 Cohort</h3>
                <p>Vets Who Code is a non-profit dedicated 
                    to filling the nations technical skills 
                    gap with America’s best.
@@ -206,10 +211,10 @@
                     <ul>React</ul>
                     <ul>And much more.</ul>
                 </li>
-             </div>
 
+            </div>
             <div class="flex-item">
-                <p>Vets Who Code Tutorial Team Lead Volunteer</p> 
+                <h3>Vets Who Code Tutorial Team Lead Volunteer</h3> 
                 <p>July 2020-Present.</p>
                 <p>For this position, I've coordinated with a small 
                  team to write tutorials for CSS, HTML, JavaScript,
@@ -219,7 +224,7 @@
             </div>
  
             <div class="flex-item">
-                <p>Freelance WordPress Developer</p>
+                <h3>Freelance WordPress Developer</h3>
                 <p>In my work as a freelance WordPress developer, 
                     I've saved my clients time and headaches by creating 
                     custom default styling, so they no longer need to 
@@ -232,13 +237,11 @@
             </div>
 
             <div class="flex-item">
-                <p>Open Source Contributor</p>
-                <p>I've made open source contributions to Vets Who Code and Apollo GraphQL.</p>
-                
+                <h3>Open Source Contributor</h3>
+                <p>I've made open source contributions to Vets Who Code and Apollo GraphQL.</p>            
                 <p>
                     On the Vets Who Code repo, there was an issue stating that the text in the header was too small and lacked contrast. You can view my pull request <a href="https://github.com/Vets-Who-Code/vets-who-code-app/pull/191">here</a>.
-                </p>
-                
+                </p>           
             </div>
         </div>
 
@@ -270,7 +273,7 @@
                   </fieldset>
             
                   <fieldset class="pure-group">
-                    <label for="email"><em>Your</em> Email Address:</label>
+                    <label for="email">Email Address:</label>
                     <input id="email" name="email" type="email" value=""
                     required placeholder="ron@channel4.com"/>
                     <span class="email-invalid" style="display:none">
@@ -283,7 +286,7 @@
             
                 <!-- Customise the Thankyou Message People See when they submit the form: -->
                 <div class="thankyou_message" style="display:none;">
-                  <h2><em>Thanks</em> for contacting us!
+                  <h2>Thanks for contacting us!
                     We will get back to you soon!</h2>
                 </div>
             
