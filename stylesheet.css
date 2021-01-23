@@ -19,12 +19,6 @@
   --gs-4: rgb(97, 97, 107);
   --gs-5: rgb(58, 58, 64);
   --gs-6: rgb(29, 29, 32);
-  --prm-1: rgb(203, 231, 246);
-  --prm-2: rgb(119, 188, 228);
-  --prm-3: rgb(51, 154, 215);
-  --prm-4: rgb(30, 108, 153);
-  --prm-5: rgb(20, 72, 102);
-  --prm-6: rgb(10, 36, 51);
   --acc-1: rgb(232, 223, 246);
   --acc-2: rgb(197, 175, 233);
   --acc-3: rgb(139, 95, 211);
@@ -32,7 +26,10 @@
   --acc-5: rgb(53, 26, 96);
   --acc-6: rgb(27, 13, 48);
   --link: rgb(139, 95, 211);
-  --header:rgb(71, 35, 128);
+  --link-hover: rgb(71, 35, 128);
+  --header:rgb(27, 13, 48);
+  --theme-switch: rgb(27, 13, 48);
+  --theme-switch-hover: rgb(181, 163, 0);
   --background-image: url(/assets/Endless-Constellation.svg);
 }
 
@@ -44,14 +41,18 @@
   --text-5: 2.5rem;
   --text-6: 3rem;
   --link: rgb(197, 175, 233);
-  --header: rgb(197, 175, 233);
+  --link-hover: rgb(71, 35, 128);
+  --header: rgb(139, 95, 211);
   --acc-1: rgb(27, 13, 48);
+  --acc-3: rgb(71, 35, 128);
+  --acc-4: rgb(197, 175, 233);
   --glass: 29, 29, 32;
   --gs-1: rgb(29, 29, 32);
   --gs-3: rgb(97, 97, 107);
   --card: #283c53;
   --text: rgb(191, 191, 197);
-  --accent: salmon;
+  --theme-switch: rgb(181, 163, 0);
+  --theme-switch-hover: rgb(27, 13, 48);
   --background-image: url(/assets/Endless-Constellation-Dark.svg);
 }
 
@@ -71,21 +72,23 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0;
   text-align: center;
-  color: var(--header);
+  
 }
 
 h1 {
   font-size: var(--text-5);
+  color: var(--header);
 }
 
 h2 {
   font-size: var(--text-4);
+  color: var(--acc-4);
 }
 
 h3 {
   font-size: var(--text-3);
+  color: var(--link);
 }
 
 p {
@@ -101,28 +104,39 @@ button {
   font-weight: heavy;
   border-radius: 5px;
   font-size: var(--text-3);
+  border: none;
+}
+
+button:hover {
+  background-color:var(--acc-4); !important
 }
 
 .flex-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   align-content: space-around;
   flex-wrap: wrap;
-  margin: var(--text-1) 5%;
+  margin-top: var(--text-6);
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .flex-item {
   overflow: auto;
   background-color: rgba(var(--glass), 0.4);
-  margin: 1rem auto;
-  padding: 1rem 1rem;
+  margin: var(--text-2) auto;
+  padding: var(--text-2) var(--text-2);
   border-radius: 5px;
   max-width: 500px;
 }
 
 a {
   color: var(--link);
+}
+
+a:hover {
+  color: var(--link-hover);
 }
 
 /*************************** Top Nav Bar **************************/
@@ -132,6 +146,7 @@ a {
   justify-content: space-between;
   height: 5.5rem;
   background-color: rgba(var(--glass), 0.4);
+  margin-bottom: var(--text-4);
 }
 
 .navbarNbhankes {
@@ -158,7 +173,7 @@ a {
 }
 
 .fontAwesomeIcon:hover {
-  color:var(--acc-6); !important
+  color:var(--acc-3); !important
 }
 
 /***********************  Screen 1 - Projects ************************/
@@ -278,6 +293,7 @@ em {
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .small:first-child {
@@ -294,6 +310,7 @@ em {
   bottom: var(--text-4);
   left: var(--text-1);
 }
+
 .theme-switch {
   display: inline-block;
   height: 34px;
@@ -305,49 +322,15 @@ em {
   display: none;
 }
 
-.slider {
-  background: rgb(255, 195, 29);
-  background: linear-gradient(
-    98deg,
-    rgba(255, 195, 29, 1) 40%,
-    rgba(8, 9, 179, 1) 65%
-  );
-  bottom: 0;
-  cursor: pointer;
-  left: 0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  transition: 0.4s;
+.theme {
+  color: var(--theme-switch);
+  font-size: var(--text-6);
 }
 
-.slider:before {
-  background-color: #fff;
-  bottom: 4px;
-  content: "";
-  height: 26px;
-  left: 4px;
-  position: absolute;
-  transition: 0.4s;
-  width: 26px;
-  box-shadow: inset -2px -2px 4px #272b34, inset 2px 2px 3px white;
+.theme:hover {
+  color: var(--theme-switch-hover);
 }
 
-input:checked + .slider {
-  background-color: #66bb6a;
-}
-
-input:checked + .slider:before {
-  transform: translateX(26px);
-}
-
-.slider.round {
-  border-radius: 34px;
-}
-
-.slider.round:before {
-  border-radius: 50%;
-}
 
 /************************** Modal **************************/
 /***********************************************************/
