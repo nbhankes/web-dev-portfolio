@@ -31,6 +31,7 @@
   --theme-switch: rgb(27, 13, 48);
   --theme-switch-hover: rgb(181, 163, 0);
   --background-image: url(/assets/Endless-Constellation.svg);
+  --header-font: sans-serif;
 }
 
 [data-theme="dark"] {
@@ -58,7 +59,7 @@
 
 html {
   font-size: 14px;
-  font-family: monospace;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   min-width:300px;
   max-width: 1400px;
   margin: 0 auto;
@@ -73,6 +74,7 @@ h4,
 h5,
 h6 {
   text-align: center;
+  font-family: var(--header-font);
   
 }
 
@@ -96,6 +98,10 @@ p {
   font-size:var(--text-3);
 }
 
+li {
+  font-size: var(--text-3);
+}
+
 button {
   background-color: var(--header);
   color: var(--acc-1);
@@ -105,6 +111,10 @@ button {
   border-radius: 5px;
   font-size: var(--text-3);
   border: none;
+}
+
+section {
+  margin: var(--text-3) auto;
 }
 
 button:hover {
@@ -237,6 +247,10 @@ em {
   background-repeat: no-repeat;
 }
 
+.list {
+  margin-left: 15%;
+}
+
 /*************************** Screen 3 - Contact Form **************************/
 /******************************************************************************/
 
@@ -250,8 +264,6 @@ em {
 /*************************************************************/
 
 .small {
-  max-width: 25rem;
-  width: 100%;
   margin: var(--text-1) 5%;
 }
 
@@ -260,7 +272,7 @@ em {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  align-content: space-around;
+  align-content: space-between;
   width: 100%;
 }
 
@@ -283,21 +295,18 @@ em {
   width: 100%;
 }
 
-.small {
-  max-width: 25rem;
-  width: 100%;
-  margin: var(--text-1) 5%;
-}
-
 #res {
   width: 100%;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
-.small:first-child {
-  max-width: 90%;
+@media screen and (min-width: 1335px) {
+  .small:first-child {
+    max-width: 100%;
+  }
 }
 
 /*************************** TOGGLE **************************/
@@ -359,7 +368,8 @@ em {
   height: 100%;
   overflow: scroll;
   margin: 0 0;
-  background-color: rgba(var(--glass), .95);
+  background-color: rgba(29, 29, 32, .95);
+  color: rgb(234, 234, 236);
   opacity: 0;
   visibility: hidden;
   transform: scale(1.1);
@@ -368,9 +378,7 @@ em {
 
 .modal-content {
   block-size: fit-content;
-
   font-size: var(--text-1);
-  background-color: var(--background);
   width: 80%;
   margin: 0 auto;
   padding: var(--text-6) 0;
@@ -403,3 +411,20 @@ em {
 .conv-factor {
   margin-bottom: var(--text-2);
 }
+
+/*********************** Contact Form **********************/
+/***********************************************************/
+
+form {
+
+}
+
+.form-elements {
+
+
+}
+
+.pure-group {
+
+}
+
