@@ -259,36 +259,37 @@
                
               <form class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
               action="https://script.google.com/macros/s/AKfycbxzgHXGBsdZV0tWaCWtCfGNWA4tEakn0NIs5YIB/exec">
-                <!-- change the form action to your script url -->
             
                 <div class="form-elements">
-                  <fieldset class="pure-group">
+                  
                     <label for="name">Name: </label>
                     <input id="name" name="name" placeholder="Ron Burgundy" />
-                  </fieldset>
+                 
             
-                  <fieldset class="pure-group">
+                  
                     <label for="message">Message: </label>
-                    <textarea id="message" name="message" rows="10"
+                    <textarea id="message" name="message" rows="5" cols="50" autocomplete="on"
                     placeholder="I have many leather-bound books and my apartment smells of rich mahogany."></textarea>
-                  </fieldset>
+                  
             
-                  <fieldset class="pure-group">
-                    <label for="email">Email Address:</label>
+                  <fieldset class="pure-group"></fieldset>
+                    <label for="email">Email:</label>
                     <input id="email" name="email" type="email" value=""
                     required placeholder="ron@channel4.com"/>
                     <span class="email-invalid" style="display:none">
                       Must be a valid email address</span>
                   </fieldset>
             
-            
-                  <button>Send</button>
+                  <div class="form-button-container">
+                    <button>Send</button>
+                  </div>
+                  
                 </div>
             
                 <!-- Customise the Thankyou Message People See when they submit the form: -->
                 <div class="thankyou_message" style="display:none;">
-                  <h2>Thanks for contacting us!
-                    We will get back to you soon!</h2>
+                  <h3>Thanks for the message!
+                    I will get back to you soon.</h3>
                 </div>
             
               </form>
