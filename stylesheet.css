@@ -1,7 +1,15 @@
 /************************** Global **************************/
 
 * {
-  margin: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -o-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
 
 :root {
@@ -19,17 +27,20 @@
   --gs-4: rgb(97, 97, 107);
   --gs-5: rgb(58, 58, 64);
   --gs-6: rgb(29, 29, 32);
+  --prm-1: rgb(255, 233, 173);
+  --prm-2: rgb(139, 95, 211);
+  --prm-3: rgb(27, 13, 48);
   --acc-1: rgb(232, 223, 246);
   --acc-2: rgb(197, 175, 233);
   --acc-3: rgb(139, 95, 211);
   --acc-4: rgb(71, 35, 128);
   --acc-5: rgb(53, 26, 96);
   --acc-6: rgb(27, 13, 48);
-  --link: rgb(139, 95, 211);
-  --link-hover: rgb(71, 35, 128);
+  --link: rgb(255, 201, 51);
+  --link-hover: rgb(255, 222, 133);
   --header:rgb(27, 13, 48);
   --theme-switch: rgb(27, 13, 48);
-  --theme-switch-hover: rgb(181, 163, 0);
+  --theme-switch-hover: rgb(255, 201, 51);
   --background-image: url(/assets/Endless-Constellation.svg);
   --header-font: sans-serif;
 }
@@ -41,24 +52,28 @@
   --text-4: 2rem;
   --text-5: 2.5rem;
   --text-6: 3rem;
-  --link: rgb(197, 175, 233);
-  --link-hover: rgb(71, 35, 128);
-  --header: rgb(139, 95, 211);
+  --prm-1: rgb(255, 233, 173);
+  --prm-2: rgb(255, 201, 51);
+  --prm-3: rgb(255, 190, 11);
+  --link: rgb(255, 201, 51);
+  --link-hover: rgb(255, 222, 133);
+  --header: rgb(197, 175, 233);
   --acc-1: rgb(27, 13, 48);
   --acc-3: rgb(71, 35, 128);
   --acc-4: rgb(197, 175, 233);
+  --acc-5: rgb(232, 223, 246);
   --glass: 29, 29, 32;
   --gs-1: rgb(29, 29, 32);
   --gs-3: rgb(97, 97, 107);
   --card: #283c53;
   --text: rgb(191, 191, 197);
-  --theme-switch: rgb(181, 163, 0);
+  --theme-switch: rgb(255, 201, 51);
   --theme-switch-hover: rgb(27, 13, 48);
   --background-image: url(/assets/Endless-Constellation-Dark.svg);
 }
 
 html {
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   min-width:300px;
   max-width: 1400px;
@@ -80,17 +95,17 @@ h6 {
 
 h1 {
   font-size: var(--text-5);
-  color: var(--header);
+  color: var(--prm-1);
 }
 
 h2 {
   font-size: var(--text-4);
-  color: var(--acc-4);
+  color: var(--prm-2);
 }
 
 h3 {
   font-size: var(--text-3);
-  color: var(--link);
+  color: var(--prm-1);
 }
 
 p {
@@ -118,7 +133,7 @@ section {
 }
 
 button:hover {
-  background-color:var(--acc-4); !important
+  background-color:var(--acc-5); !important
 }
 
 .flex-container {
@@ -155,15 +170,13 @@ a:hover {
   display: flex;
   justify-content: space-between;
   height: 5.5rem;
-
   margin-bottom: var(--text-4);
 }
 
 .navbarNbhankes {
   display: flex;
   justify-content: end;
-  color: var(--header);
-
+  color: var(--text);
   height: 100%;
   font-family: sans-serif;
   font-size: var(--text-5);
@@ -183,7 +196,7 @@ a:hover {
 }
 
 .fontAwesomeIcon:hover {
-  color:var(--acc-3); !important
+  color:var(--prm-1); !important
 }
 
 /***********************  Screen 1 - Projects ************************/
@@ -219,10 +232,10 @@ em {
 }
 
 .conv-factor {
-  margin: 0 1rem;
+  margin: 0 0.25rem;
   border: solid 0.5px;
   border-radius: 10px;
-  padding: 0.5rem 0.5rem;
+  padding: 0.1rem 0.25rem;
   text-align: center;
 }
 
@@ -232,6 +245,26 @@ em {
   margin: var(--text-1) var(--text-1);
 }
 
+.num p {
+  font-size: var(--text-2);
+}
+
+.per p {
+  font-size: var(--text-2);
+}
+
+.denom p {
+  font-size: var(--text-2);
+}
+
+.equation-symbol {
+  font-size: var(--text-1);
+}
+
+.conv-factor-container {
+  display: flex;
+  gap:var(--text-2);
+}
 
 /*************************** Screen 2 - Experience **************************/
 /****************************************************************************/
@@ -303,7 +336,7 @@ em {
   justify-content: space-between;
 }
 
-@media screen and (min-width: 1335px) {
+@media screen and (min-width: 1130px) {
   .small:first-child {
     max-width: 100%;
     margin-bottom: var(--text-5);
@@ -416,32 +449,146 @@ em {
 /*********************** Contact Form **********************/
 /***********************************************************/
 
-.gform {
-  min-width: 60%;
+.container #contact {
+  margin: 0 auto;
 }
 
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea,
+#contact button[type="submit"],
 
-
-.pure-group>label {
-  width: 100px;
-  text-align: right;
-  margin-right: var(--text-2);
+#contact {
+  background: rgba(var(--glass), 0.4);;
+  padding: 25px;
+  margin: 150px 0;
 }
 
-.pure-group {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
+#contact h3 {
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#contact h4 {
+  margin: 5px 0 15px;
+  display: block;
+  font-size: 13px;
+  font-weight: 400;
+}
+
+fieldset {
   border: none;
+  margin: 0 0 10px;
+  min-width: 100%;
+  padding: 0;
+  width: 100%;
 }
 
-.form-button-container {
-width: 100%;
-display: flex;
-justify-content: center;
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  background: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
 }
 
-.pure-group {
-
+#contact input[type="text"]:hover,
+#contact input[type="email"]:hover,
+#contact textarea:hover {
+  -webkit-transition: border-color 0.3s ease-in-out;
+  -moz-transition: border-color 0.3s ease-in-out;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid #aaa;
 }
 
+#contact textarea {
+  height: 100px;
+  max-width: 100%;
+  resize: none;
+}
+
+#contact button {
+  background-color: var(--header);
+  color: var(--acc-1);
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button[type="submit"]:hover {
+  -webkit-transition: background 0.3s ease-in-out;
+  -moz-transition: background 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active {
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#contact input:focus,
+#contact textarea:focus {
+  outline: 0;
+  border: 1px solid #aaa;
+}
+
+::-webkit-input-placeholder {
+  color: #888;
+}
+
+:-moz-placeholder {
+  color: #888;
+}
+
+::-moz-placeholder {
+  color: #888;
+}
+
+:-ms-input-placeholder {
+  color: #888;
+}
+
+
+/***************** @media ******************/
+/***********************************************************/
+
+@media screen and (max-width: 750px) {
+  .navbarNbhankes {
+    font-size: var(--text-5);
+    margin: var(--text-2) var(--text-2);
+  }
+
+  .fontAwesomeIcon {
+    font-size: var(--text-6);
+  }
+
+  html {
+    font-size: 14px;
+  }
+}
+
+
+
+
+@media screen and (max-width: 650px) {
+  .navbarNbhankes {
+    font-size: var(--text-4);
+    margin: var(--text-2) var(--text-2);
+  }
+
+  .fontAwesomeIcon {
+    font-size: var(--text-5);
+  }
+
+  html {
+    font-size: 12px;
+  }
+}
