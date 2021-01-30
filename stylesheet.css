@@ -19,6 +19,14 @@
   --text-4: 2rem;
   --text-5: 2.5rem;
   --text-6: 3rem;
+  --button: rgb(27, 13, 48);
+  --button-text: rgb(255, 201, 51);
+  --button-hover: rgb(139, 95, 211);
+  --button-hover-text: rgb(234, 234, 236);
+  --h2: rgb(29, 29, 32);
+  --h3: rgb(53, 26, 96);
+  --link: rgb(139, 95, 211);
+  --link-hover: rgb(255, 190, 11);
   --text: rgb(58, 58, 64);
   --glass: 137, 137, 148;
   --gs-1: rgb(234, 234, 236);
@@ -36,8 +44,6 @@
   --acc-4: rgb(71, 35, 128);
   --acc-5: rgb(53, 26, 96);
   --acc-6: rgb(27, 13, 48);
-  --link: rgb(255, 201, 51);
-  --link-hover: rgb(255, 222, 133);
   --header:rgb(27, 13, 48);
   --theme-switch: rgb(27, 13, 48);
   --theme-switch-hover: rgb(255, 201, 51);
@@ -52,12 +58,12 @@
   --text-4: 2rem;
   --text-5: 2.5rem;
   --text-6: 3rem;
-  --prm-1: rgb(255, 233, 173);
-  --prm-2: rgb(255, 201, 51);
-  --prm-3: rgb(255, 190, 11);
+  --button: rgb(255, 201, 51);
+  --button-text: rgb(71, 35, 128);
+  --h2: rgb(197, 175, 233);
+  --h3: rgb(255, 201, 51);
   --link: rgb(255, 201, 51);
   --link-hover: rgb(255, 222, 133);
-  --header: rgb(197, 175, 233);
   --acc-1: rgb(27, 13, 48);
   --acc-3: rgb(71, 35, 128);
   --acc-4: rgb(197, 175, 233);
@@ -66,7 +72,7 @@
   --gs-1: rgb(29, 29, 32);
   --gs-3: rgb(97, 97, 107);
   --card: #283c53;
-  --text: rgb(191, 191, 197);
+  --text: rgb(234, 234, 236);
   --theme-switch: rgb(255, 201, 51);
   --theme-switch-hover: rgb(27, 13, 48);
   --background-image: url(/assets/Endless-Constellation-Dark.svg);
@@ -93,19 +99,14 @@ h6 {
   
 }
 
-h1 {
-  font-size: var(--text-5);
-  color: var(--prm-1);
-}
-
 h2 {
   font-size: var(--text-4);
-  color: var(--prm-2);
+  color: var(--h2);
 }
 
 h3 {
   font-size: var(--text-3);
-  color: var(--prm-1);
+  color: var(--h3);
 }
 
 p {
@@ -118,8 +119,8 @@ li {
 }
 
 button {
-  background-color: var(--header);
-  color: var(--acc-1);
+  background-color: var(--button);
+  color: var(--button-text);
   width: 9rem;
   height:3rem;
   font-weight: heavy;
@@ -133,7 +134,9 @@ section {
 }
 
 button:hover {
-  background-color:var(--acc-5); !important
+  color: var(--button-hover-text);
+  background-color:var(--button-hover); !important
+
 }
 
 .flex-container {
@@ -164,6 +167,13 @@ a:hover {
   color: var(--link-hover);
 }
 
+::selection {
+  /* Change highlight background color to black */
+  background: var(--button-text);
+  /* Change highlight text color to red */
+  color: var(--button);
+}
+
 /*************************** Top Nav Bar **************************/
 /*************************************************************/
 .navbarContainer {
@@ -171,32 +181,41 @@ a:hover {
   justify-content: space-between;
   height: 5.5rem;
   margin-bottom: var(--text-4);
+  background-color: rgba(var(--glass), 0.4);
 }
 
 .navbarNbhankes {
   display: flex;
   justify-content: end;
-  color: var(--text);
+  color: var(--button);
+  text-transform: uppercase;
   height: 100%;
-  font-family: sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
   font-size: var(--text-5);
-  margin: var(--text-2) var(--text-2);
+  margin: auto var(--text-2);
+
+}
+
+.navbarNbhankesContainer {
+  float: left;
+  margin: auto 0;
+
 }
 
 .socialMediaContainer {
   display: flex;
   justify-content: center;
-  margin: .5rem 1rem;
+  margin: auto 1rem;
 }
 
 .fontAwesomeIcon {
   font-size: 3em;
-  color:var(--header);
+  color:var(--button);
   margin: .2rem .25em;
 }
 
 .fontAwesomeIcon:hover {
-  color:var(--prm-1); !important
+  color:var(--button-hover); !important
 }
 
 /***********************  Screen 1 - Projects ************************/
@@ -513,15 +532,11 @@ fieldset {
 }
 
 #contact button {
-  background-color: var(--header);
-  color: var(--acc-1);
   cursor: pointer;
   width: 100%;
   border: none;
-  color: #FFF;
   margin: 0 0 5px;
   padding: 10px;
-  font-size: 15px;
 }
 
 #contact button[type="submit"]:hover {
@@ -562,7 +577,7 @@ fieldset {
 
 @media screen and (max-width: 750px) {
   .navbarNbhankes {
-    font-size: var(--text-5);
+    font-size: var(--text-4);
     margin: var(--text-2) var(--text-2);
   }
 
@@ -580,7 +595,7 @@ fieldset {
 
 @media screen and (max-width: 650px) {
   .navbarNbhankes {
-    font-size: var(--text-4);
+    font-size: var(--text-3);
     margin: var(--text-2) var(--text-2);
   }
 

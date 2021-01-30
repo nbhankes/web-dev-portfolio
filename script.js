@@ -83,35 +83,35 @@ function getDevToArticles() {
             <img class="blog-img" src=${res.data[0].cover_image}></img>
             <h3 class="blog-title">${res.data[0].title}</h3>
             <p class="blog-description">${res.data[0].description}</p>
-            <a class="blog-url" href=${res.data[0].url}>Read full article</a>
+            <h3><a class="blog-url" href=${res.data[0].url}>Read full article</a></h3>
           </div>
 
           <div class="flex-item small">
             <img class="blog-img" src=${res.data[1].cover_image}></img>
             <h3 class="blog-title">${res.data[1].title}</h3>
             <p class="blog-description">${res.data[1].description}</p>
-            <a class="blog-url" href=${res.data[1].url}>Read full article</a>
+            <h3><a class="blog-url" href=${res.data[1].url}>Read full article</a></h3>
           </div>
 
           <div class="flex-item small">
             <img class="blog-img" src=${res.data[2].cover_image}></img>
             <h3 class="blog-title">${res.data[2].title}</h3>
             <p class="blog-description">${res.data[2].description}</p>
-            <a class="blog-url" href=${res.data[2].url}>Read full article</a>
+            <h3><a class="blog-url" href=${res.data[2].url}>Read full article</a></h3>
           </div>
 
           <div class="flex-item small">
             <img class="blog-img" src=${res.data[3].cover_image}></img>
             <h3 class="blog-title">${res.data[3].title}</h3>
             <p class="blog-description">${res.data[3].description}</p>
-            <a class="blog-url" href=${res.data[3].url}>Read full article</a>
+            <h3><a class="blog-url" href=${res.data[3].url}>Read full article</a></h3>
           </div>
 
           <div class="flex-item small">
             <img class="blog-img" src=${res.data[4].cover_image}></img>
             <h3 class="blog-title">${res.data[4].title}</h3>
             <p class="blog-description">${res.data[4].description}</p>
-            <a class="blog-url" href=${res.data[4].url}>Read full article</a>
+            <h3><a class="blog-url" href=${res.data[4].url}>Read full article</a></h3>
           </div>
 
         </div>
