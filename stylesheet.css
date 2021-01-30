@@ -23,29 +23,15 @@
   --button-text: rgb(255, 201, 51);
   --button-hover: rgb(139, 95, 211);
   --button-hover-text: rgb(234, 234, 236);
+  --icons: rgb(139, 95, 211);
+  --icons-hover: rgb(53, 26, 96);
+  --banner: rgb(53, 26, 96);
   --h2: rgb(29, 29, 32);
   --h3: rgb(53, 26, 96);
   --link: rgb(139, 95, 211);
   --link-hover: rgb(255, 190, 11);
   --text: rgb(58, 58, 64);
   --glass: 137, 137, 148;
-  --gs-1: rgb(234, 234, 236);
-  --gs-2: rgb(191, 191, 197);
-  --gs-3: rgb(137, 137, 148);
-  --gs-4: rgb(97, 97, 107);
-  --gs-5: rgb(58, 58, 64);
-  --gs-6: rgb(29, 29, 32);
-  --prm-1: rgb(255, 233, 173);
-  --prm-2: rgb(139, 95, 211);
-  --prm-3: rgb(27, 13, 48);
-  --acc-1: rgb(232, 223, 246);
-  --acc-2: rgb(197, 175, 233);
-  --acc-3: rgb(139, 95, 211);
-  --acc-4: rgb(71, 35, 128);
-  --acc-5: rgb(53, 26, 96);
-  --acc-6: rgb(27, 13, 48);
-  --header:rgb(27, 13, 48);
-  --theme-switch: rgb(27, 13, 48);
   --theme-switch-hover: rgb(255, 201, 51);
   --background-image: url(/assets/Endless-Constellation.svg);
   --header-font: sans-serif;
@@ -58,20 +44,18 @@
   --text-4: 2rem;
   --text-5: 2.5rem;
   --text-6: 3rem;
-  --button: rgb(255, 201, 51);
-  --button-text: rgb(71, 35, 128);
+  --button: rgb(197, 175, 233);
+  --button-text: rgb(27, 13, 48);
+  --button-hover: rgb(27, 13, 48);
+  --button-hover-text: rgb(234, 234, 236);
+  --icons: rgb(139, 95, 211);
+  --icons-hover: rgb(255, 201, 51);
+  --banner: rgb(197, 175, 233);
   --h2: rgb(197, 175, 233);
   --h3: rgb(255, 201, 51);
-  --link: rgb(255, 201, 51);
-  --link-hover: rgb(255, 222, 133);
-  --acc-1: rgb(27, 13, 48);
-  --acc-3: rgb(71, 35, 128);
-  --acc-4: rgb(197, 175, 233);
-  --acc-5: rgb(232, 223, 246);
+  --link: rgb(255, 222, 133);
+  --link-hover: rgb(255, 201, 51);
   --glass: 29, 29, 32;
-  --gs-1: rgb(29, 29, 32);
-  --gs-3: rgb(97, 97, 107);
-  --card: #283c53;
   --text: rgb(234, 234, 236);
   --theme-switch: rgb(255, 201, 51);
   --theme-switch-hover: rgb(27, 13, 48);
@@ -82,7 +66,6 @@ html {
   font-size: 16px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   min-width:300px;
-  max-width: 1400px;
   margin: 0 auto;
   background-image: var(--background-image);
   color: var(--text);
@@ -131,6 +114,7 @@ button {
 
 section {
   margin: var(--text-3) auto;
+  max-width: 1400px;
 }
 
 button:hover {
@@ -168,9 +152,7 @@ a:hover {
 }
 
 ::selection {
-  /* Change highlight background color to black */
   background: var(--button-text);
-  /* Change highlight text color to red */
   color: var(--button);
 }
 
@@ -181,13 +163,13 @@ a:hover {
   justify-content: space-between;
   height: 5.5rem;
   margin-bottom: var(--text-4);
-  background-color: rgba(var(--glass), 0.4);
+  background-color: rgba(var(--glass), 0.6);
 }
 
 .navbarNbhankes {
   display: flex;
   justify-content: end;
-  color: var(--button);
+  color: var(--banner);
   text-transform: uppercase;
   height: 100%;
   font-family: Verdana, Geneva, Tahoma, sans-serif, sans-serif;
@@ -210,12 +192,12 @@ a:hover {
 
 .fontAwesomeIcon {
   font-size: 3em;
-  color:var(--button);
+  color:var(--icons);
   margin: .2rem .25em;
 }
 
 .fontAwesomeIcon:hover {
-  color:var(--button-hover); !important
+  color:var(--icons-hover); !important
 }
 
 /***********************  Screen 1 - Projects ************************/
@@ -370,7 +352,7 @@ em {
   align-items: center;
   position: fixed;
   bottom: var(--text-4);
-  left: var(--text-1);
+  left: var(--text-3);
 }
 
 .theme-switch {
@@ -378,6 +360,7 @@ em {
   height: 34px;
   position: relative;
   width: 60px;
+  margin: auto auto;
 }
 
 .theme-switch input {
@@ -444,8 +427,8 @@ em {
   line-height: var(--text-4);
   text-align: center;
   cursor: pointer;
-  background-color: var(--header);
-  color: var(--acc-1);
+  background-color: var(--button);
+  color: var(--button-text);
   font-size: var(--text-4);
   padding-bottom: 4px;
 }
@@ -510,19 +493,15 @@ fieldset {
 #contact input[type="email"],
 #contact textarea {
   width: 100%;
-  border: 1px solid #ccc;
-  background: #FFF;
+  border: 1px solid rgb(255, 222, 133);
   margin: 0 0 5px;
   padding: 10px;
+  font-size: var(--text-2);
+  color: var(--text);
 }
 
-#contact input[type="text"]:hover,
-#contact input[type="email"]:hover,
-#contact textarea:hover {
-  -webkit-transition: border-color 0.3s ease-in-out;
-  -moz-transition: border-color 0.3s ease-in-out;
-  transition: border-color 0.3s ease-in-out;
-  border: 1px solid #aaa;
+::placeholder {
+  color: var(--banner);
 }
 
 #contact textarea {
@@ -538,39 +517,6 @@ fieldset {
   margin: 0 0 5px;
   padding: 10px;
 }
-
-#contact button[type="submit"]:hover {
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background-color 0.3s ease-in-out;
-}
-
-#contact button[type="submit"]:active {
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-#contact input:focus,
-#contact textarea:focus {
-  outline: 0;
-  border: 1px solid #aaa;
-}
-
-::-webkit-input-placeholder {
-  color: #888;
-}
-
-:-moz-placeholder {
-  color: #888;
-}
-
-::-moz-placeholder {
-  color: #888;
-}
-
-:-ms-input-placeholder {
-  color: #888;
-}
-
 
 /***************** @media ******************/
 /***********************************************************/
@@ -589,8 +535,6 @@ fieldset {
     font-size: 14px;
   }
 }
-
-
 
 
 @media screen and (max-width: 650px) {
