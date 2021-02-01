@@ -159,6 +159,11 @@ a:hover {
   color: var(--button);
 }
 
+.visually-hidden {
+  visibility: hidden;
+  display: none;
+}
+
 /*************************** Top Nav Bar **************************/
 /*************************************************************/
 .navbarContainer {

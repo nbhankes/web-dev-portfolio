@@ -14,182 +14,196 @@
     <script type="text/javascript" src="script.js" defer></script>
   </head>
   <body onload="getDevToArticles()">
+
+
+<!-------------------------NAVBAR--------------------------->
     
     <div class="navbarContainer">
-        <div class="navbarNbhankesContainer">
-          <h2 class="navbarNbhankes">
-            N. B. Hankes
-          </h2>
-        </div>
-    
-        <div class="socialMediaContainer">
-  
-          <a href="https://dev.to/nbhankes" rel="noopener noreferrer" target="_blank">
-            <span class="fontAwesomeIcon">
-              <i class="fab fa-dev"></i>
-            </span>
-          </a>
-  
-          <a href="https://codepen.io/nbhankes" rel="noopener noreferrer" target="_blank">
-            <span class="fontAwesomeIcon">
-              <i class="fab fa-codepen"></i>
-            </span>
-          </a>
-  
-          <a href="https://github.com/nbhankes" rel="noopener noreferrer" target="_blank">
-            <span class="fontAwesomeIcon">
-              <i class="fab fa-github-square"></i>
-            </span>
-          </a>
-  
-          <a href="https://twitter.com/nbhankes" rel="noopener noreferrer" target="_blank">
-           <span class="fontAwesomeIcon">
-            <i class="fab fa-twitter-square"></i>
-           </span>
-          </a>
-  
-          <a href="https://www.linkedin.com/in/nbhankes" rel="noopener noreferrer" target="_blank">
-            <span class="fontAwesomeIcon">
-              <i class="fab fa-linkedin"></i>
-            </span>
-          </a>
-  
-        </div>
+      <div class="navbarNbhankesContainer">
+        <h2 class="navbarNbhankes">
+           N. B. Hankes
+        </h2>
       </div>
     
-    <section class="screen-1">
-        <div class"flex-container">
-            <div class="flex-container">
-
-              <h2>Hi. <span class="wave">👋</span> I'm Nate.</h2>
-                
-              <p>As a professional chemist, I wanted to solve a real world problem
-                  while learning to code. This project computes dimensional analysis 
-                  calculations. Check out the video to watch it in action:
-              </p>
-
-            </div>
-
-                <div class="iframe-container">
-                    <iframe title="video of calculator app" frameborder="0" width="100%" height="100%" src="https://www.youtube.com/embed/G74zKmIrcdY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-
-            <div class="flex-container">
-                <div class="flex-item">
-                    <h3>Frontend</h3>
-                    <img class="icon" alt="gatsby j s logo" src="/assets/gatsby.png"/>
-                    <img class="icon" alt="graph q l logo" src="/assets/graphql.png"/>
-                    <img class="icon" alt="netlify logo" src="/assets/netlify.png"/>
-
-                </div>
-                <div class="flex-item">
-                    <h3>Backend</h3>
-                    <img class="icon" alt="node j s logo" src="/assets/nodejs_logo.png"/>
-                    <img class="icon" alt="mongo d b logo" src="/assets/mongodb.png"/>
-                    <img class="icon" alt="express logo" src="/assets/express.png"/>
-                    <img class="icon" alt="apollo logo" src="/assets/apollo.png"/>
-                    <img class="icon" alt="heroku logo" src="/assets/heroku.png"/>
-                 </div>
-            </div>
-
-
-                <div class="button-container">
-                    <p>What is dimensional analysis? Let's look at this fun 
-                        example, so you can understand what's happening under the hood.
-                    </p>
-                    <button class="activate">Learn More</button>
-                </div>
-                <div class="modal">
-                    <div class="modal-content">
-                        <span class="close-button">&times;</span>
-
-
-                        <p>Ever wonder how many skittles fit in an Olympic size swimming pool?</p>
-                        <p>Yeah, I know. Me too! </p>
-                        <p>With the help of dimensional analysis, we can find an answer.</p>
-                        <p>But first we need to know a couple things.</p>
-                        <p>1. The volume of a Skittle</p>
-                        <p>2. The volume of an Olympic sized swimmming pool</p>
-                        <p>Let's say a single Skittle displaces 4 milliliters of water in a graduated cylinder.</p>
-                        <p>And Google says an Olympic sized swimming pool holds 2,500,000 liters.</p>
-                        <p>Each of those last two statments is a conversion factor. And dimensional analysis makes calculations using these types of conversion factors:</p>
-                
-                        <div class="flex-container">
-                
-                            <div class="conv-factor">
-                                <div class="num"><p>1 Skittle</p></div>
-                                <div class="per"><p>per</p></div>
-                                <div class="denom"><p>4 mL</p></div>
-                            </div>
-
-                            <div class="conv-factor">
-                                <div class="num"><p>2,500,000 liters</p></div>
-                                <div class="per"><p>per</p></div>
-                                <div class="denom"><p>1 Olympic Pool</p></div>
-                            </div>
-                
-                        </div>
-
-                        <p>And since units found in both the numerator (top) and denominator (bottom) cancel out one another, we'll add another conversion factor to cancel out the milliliters and liters units, leaving us with Skittles per Olympic Pool.</p> 
-                        <p>Follow the rules of fractions by multiplying across and dividing to find our product value.</p>
-
-                        <div class="conv-factor-container">
-                
-                            <div class="conv-factor">
-                                <div class="num"><p>1 Skittle</p></div>
-                                <div class="per"><p>per</p></div>
-                                <div class="denom"><p>4 <em class=crossed-out">milliliters</em></p></div>
-                            </div>
-                
-                            <p class="equation-symbol">*</p>
-
-                            <div class="conv-factor">
-                                <div class="num"><p>1,000 <em class=crossed-out">milliliters</em></p></div>
-                                <div class="per"><p>per</p></div>
-                                <div class="denom"><p><em class=crossed-out">liter</em></p></div>
-                            </div>
-
-                            <p class="equation-symbol">*</p>
-
-                            <div class="conv-factor">
-                                <div class="num"><p>2,500,000 <em class=crossed-out">liters</em></p></div>
-                                <div class="per"><p>per</p></div>
-                                <div class="denom"><p>1 Olympic Pool</p></div>
-                            </div>
-
-                            <p class="equation-symbol">=</p>
-
-                            <div class="conv-factor">
-                                <div class="num"><p>625,000,000 Skittles</p></div>
-                                <div class="per"><p>per</p></div>
-                                <div class="denom"><p>1 Olympic Pool</p></div>
-                            </div>
-                
-                        </div>
-                    </div>
-                </div>
-                <div class="flex-container">
-                    <p>
-                    Unlike current online conversion tools, this 
-                    program allows users to generate and save their own conversion factors,
-                    which makes this application useful for research and engineering firms.
-                    </p>
-
-                    <p>
-                    The calculator is functional, and I plan to add authorization and authentication, billing, and more tooling for users to 
-                    save calculations and collaborate on projects.
-                    </p>
-
-                    <h3>Live Demo:</h3><h3><a class="demo-link" href="https://dimensional-analysis-app.netlify.app/">https://dimensional-analysis-app.netlify.app/</a></h3>
-                
-                    <p>The backend is hosted on a free Dyno via Heroku. The free tier results in longer load times since infrequently used apps are removed from the server memory to save resources. Learn more about Heroku's free tier strategy <a href="https://devcenter.heroku.com/articles/dynos#dyno-sleeping">here</a></p> 
-                </div>
-
-            </div>
-        </section>
+      <div class="socialMediaContainer">
+  
+        <a href="https://dev.to/nbhankes" rel="noopener noreferrer" target="_blank">
+          <span class="fontAwesomeIcon">
+            <i class="fab fa-dev"></i>
+            <span class="visually-hidden">Link to Nate's DEV to profile</span>
+          </span>
+        </a>
+  
+        <a href="https://codepen.io/nbhankes" rel="noopener noreferrer" target="_blank">
+          <span class="fontAwesomeIcon">
+            <i class="fab fa-codepen"></i>
+            <span class="visually-hidden">Link to Nate's Codepen profile</span>
+          </span>
+        </a>
+  
+        <a href="https://github.com/nbhankes" rel="noopener noreferrer" target="_blank">
+          <span class="fontAwesomeIcon">
+            <i class="fab fa-github-square"></i>
+            <span class="visually-hidden">Link to Nate's Github profile</span>
+          </span>
+        </a>
+  
+        <a href="https://twitter.com/nbhankes" rel="noopener noreferrer" target="_blank">
+          <span class="fontAwesomeIcon">
+            <i class="fab fa-twitter-square"></i>
+            <span class="visually-hidden">Link to Nate's Twitter profile</span>
+          </span>
+        </a>
+  
+        <a href="https://www.linkedin.com/in/nbhankes" rel="noopener noreferrer" target="_blank">
+          <span class="fontAwesomeIcon">
+            <i class="fab fa-linkedin"></i>
+            <span class="visually-hidden">Link to Nate's Linked in profile</span>
+          </span>
+        </a>
+  
+      </div>
     </div>
+    
+<!-------------------------PROJECTS--------------------------->
 
-    <section class="screen-2">
+    <section>
+        <div class="flex-container">
+
+          <h2>Hi. <span class="wave">👋</span> I'm Nate.</h2>
+                
+            <p>As a professional chemist, I wanted to solve a real world problem
+              while learning to code. This project computes dimensional analysis 
+              calculations. Check out the video to watch it in action:
+            </p>
+
+        </div>
+
+        <div class="iframe-container">
+          <iframe title="video of calculator app" frameborder="0" width="100%" height="100%" src="https://www.youtube.com/embed/G74zKmIrcdY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="flex-container">
+          <div class="flex-item">
+            <h3>Frontend</h3>
+              <img class="icon" alt="gatsby j s logo" src="/assets/gatsby.png"/>
+              <img class="icon" alt="graph q l logo" src="/assets/graphql.png"/>
+              <img class="icon" alt="netlify logo" src="/assets/netlify.png"/>
+          </div>
+          <div class="flex-item">
+            <h3>Backend</h3>
+            <img class="icon" alt="node j s logo" src="/assets/nodejs_logo.png"/>
+            <img class="icon" alt="mongo d b logo" src="/assets/mongodb.png"/>
+            <img class="icon" alt="express logo" src="/assets/express.png"/>
+            <img class="icon" alt="apollo logo" src="/assets/apollo.png"/>
+            <img class="icon" alt="heroku logo" src="/assets/heroku.png"/>
+          </div>
+        </div>
+
+
+        <div class="button-container">
+          <p>What is dimensional analysis? Let's look at this fun 
+            example, so you can understand what's happening under the hood.
+          </p>
+          <button class="activate">Learn More</button>
+        </div>
+
+<!-------------------------MODAL--------------------------->
+
+
+        <div class="modal">
+          <div class="modal-content">
+            <span class="close-button">&times;</span>
+
+            <p>Ever wonder how many skittles fit in an Olympic size swimming pool?</p>
+            <p>Yeah, I know. Me too! </p>
+            <p>With the help of dimensional analysis, we can find an answer.</p>
+            <p>But first we need to know a couple things.</p>
+            <p>1. The volume of a Skittle</p>
+            <p>2. The volume of an Olympic sized swimmming pool</p>
+            <p>Let's say a single Skittle displaces 4 milliliters of water in a graduated cylinder.</p>
+            <p>And Google says an Olympic sized swimming pool holds 2,500,000 liters.</p>
+            <p>Each of those last two statments is a conversion factor. And dimensional analysis makes calculations using these types of conversion factors:</p>
+                
+            <div class="flex-container">
+                
+              <div class="conv-factor">
+                <div class="num"><p>1 Skittle</p></div>
+                <div class="per"><p>per</p></div>
+                <div class="denom"><p>4 mL</p></div>
+              </div>
+
+              <div class="conv-factor">
+                <div class="num"><p>2,500,000 liters</p></div>
+                <div class="per"><p>per</p></div>
+                <div class="denom"><p>1 Olympic Pool</p></div>
+              </div>
+                
+            </div>
+
+            <p>And since units found in both the numerator (top) and denominator (bottom) cancel out one another, we'll add another conversion factor to cancel out the milliliters and liters units, leaving us with Skittles per Olympic Pool.</p> 
+            <p>Follow the rules of fractions by multiplying across and dividing to find our product value.</p>
+
+            <div class="conv-factor-container">
+                
+              <div class="conv-factor">
+                <div class="num"><p>1 Skittle</p></div>
+                <div class="per"><p>per</p></div>
+                <div class="denom"><p>4 <em class=crossed-out">milliliters</em></p></div>
+              </div>
+                
+              <p class="equation-symbol">*</p>
+
+              <div class="conv-factor">
+                <div class="num"><p>1,000 <em class=crossed-out">milliliters</em></p></div>
+                <div class="per"><p>per</p></div>
+                <div class="denom"><p><em class=crossed-out">liter</em></p></div>
+              </div>
+
+              <p class="equation-symbol">*</p>
+
+              <div class="conv-factor">
+                <div class="num"><p>2,500,000 <em class=crossed-out">liters</em></p></div>
+                <div class="per"><p>per</p></div>
+                <div class="denom"><p>1 Olympic Pool</p></div>
+              </div>
+
+              <p class="equation-symbol">=</p>
+
+              <div class="conv-factor">
+                <div class="num"><p>625,000,000 Skittles</p></div>
+                <div class="per"><p>per</p></div>
+                <div class="denom"><p>1 Olympic Pool</p></div>
+              </div>
+                
+            </div>
+          </div>
+        </div>
+        <div class="flex-container">
+          <p>
+            Unlike current online conversion tools, this 
+            program allows users to generate and save their own conversion factors,
+            which makes this application useful for research and engineering firms.
+          </p>
+
+          <p>
+            The calculator is functional, and I plan to add authorization and authentication, billing, and more tooling for users to 
+            save calculations and collaborate on projects.
+          </p>
+
+          <h3>Live Demo:</h3><h3><a class="demo-link" href="https://dimensional-analysis-app.netlify.app/">https://dimensional-analysis-app.netlify.app/</a></h3>
+                
+          <p>The backend is hosted on a free Dyno via Heroku. The free tier results in longer load times since infrequently used apps are removed from the server memory to save resources. Learn more about Heroku's free tier strategy <a href="https://devcenter.heroku.com/articles/dynos#dyno-sleeping">here</a></p> 
+        </div>
+
+      </div>
+    </section>
+
+
+<!-------------------------EXPERIENCE--------------------------->
+
+
+    <section>
         <h2>My Experience</h2>
         <div class="flex-container">
             <div class="flex-item experience">
@@ -242,21 +256,20 @@
             </div>
     </section>
 
+<!-------------------------BLOG-POSTS--------------------------->
+
     <section>
       <h2>Learning By Teaching</h2>
       <h3>My DEV Blog</h3>
            
       <div id="res"></div>
     </section>
-        
-    </div>
 
+<!-------------------------CONTACT-FORM--------------------------->
 
-
-    <section class="screen-3">
-
+    <section>
         <div class"flex-container">
-    <!-- Form from tutorial: https://www.youtube.com/watch?v=GMXFMVg5E4U -->
+    <!-- Form created using tutorial: https://www.youtube.com/watch?v=GMXFMVg5E4U -->
           
               <div class="container">  
                 <form id="contact" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
@@ -307,30 +320,35 @@
       <a href="https://dev.to/nbhankes" rel="noopener noreferrer" target="_blank">
         <span class="fontAwesomeIcon">
           <i class="fab fa-dev"></i>
+          <span class="visually-hidden">Link to Nate's DEV to profile</span>
         </span>
       </a>
 
       <a href="https://codepen.io/nbhankes" rel="noopener noreferrer" target="_blank">
         <span class="fontAwesomeIcon">
           <i class="fab fa-codepen"></i>
+          <span class="visually-hidden">Link to Nate's Codepen profile</span>
         </span>
       </a>
 
       <a href="https://github.com/nbhankes" rel="noopener noreferrer" target="_blank">
         <span class="fontAwesomeIcon">
           <i class="fab fa-github-square"></i>
+          <span class="visually-hidden">Link to Nate's Github profile</span>
         </span>
       </a>
 
       <a href="https://twitter.com/nbhankes" rel="noopener noreferrer" target="_blank">
        <span class="fontAwesomeIcon">
         <i class="fab fa-twitter-square"></i>
+        <span class="visually-hidden">Link to Nate's Twitter profile</span>
        </span>
       </a>
 
       <a href="https://www.linkedin.com/in/nbhankes" rel="noopener noreferrer" target="_blank">
         <span class="fontAwesomeIcon">
           <i class="fab fa-linkedin"></i>
+          <span class="visually-hidden">Link to Nate's Linked in profile</span>
         </span>
       </a>
 
