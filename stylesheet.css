@@ -12,32 +12,9 @@
     text-rendering: optimizeLegibility;
 }
 
-:root {
-  --text-1: 0.5rem;
-  --text-2: 1rem;
-  --text-3: 1.5rem;
-  --text-4: 2rem;
-  --text-5: 2.5rem;
-  --text-6: 3rem;
-  --button: rgb(27, 13, 48);
-  --button-text: rgb(255, 201, 51);
-  --button-hover: rgb(139, 95, 211);
-  --button-hover-text: rgb(234, 234, 236);
-  --icons: rgb(139, 95, 211);
-  --icons-hover: rgb(53, 26, 96);
-  --banner: rgb(53, 26, 96);
-  --h2: rgb(29, 29, 32);
-  --h3: rgb(53, 26, 96);
-  --link: rgb(139, 95, 211);
-  --link-hover: rgb(255, 190, 11);
-  --text: rgb(58, 58, 64);
-  --glass: 137, 137, 148;
-  --theme-switch-hover: rgb(255, 201, 51);
-  --background-image: url(/assets/Endless-Constellation.svg);
-  --header-font: sans-serif;
-}
 
-[data-theme="dark"] {
+
+:root  {
   --text-1: 0.5rem;
   --text-2: 1rem;
   --text-3: 1.5rem;
@@ -60,6 +37,32 @@
   --theme-switch: rgb(255, 201, 51);
   --theme-switch-hover: rgb(27, 13, 48);
   --background-image: url(/assets/Endless-Constellation-Dark.svg);
+  --header-font: sans-serif;
+}
+
+[data-theme="dark"]{
+  --text-1: 0.5rem;
+  --text-2: 1rem;
+  --text-3: 1.5rem;
+  --text-4: 2rem;
+  --text-5: 2.5rem;
+  --text-6: 3rem;
+  --button: rgb(27, 13, 48);
+  --button-text: rgb(255, 201, 51);
+  --button-hover: rgb(139, 95, 211);
+  --button-hover-text: rgb(234, 234, 236);
+  --icons: rgb(139, 95, 211);
+  --icons-hover: rgb(53, 26, 96);
+  --banner: rgb(53, 26, 96);
+  --h2: rgb(29, 29, 32);
+  --h3: rgb(53, 26, 96);
+  --link: rgb(139, 95, 211);
+  --link-hover: rgb(255, 190, 11);
+  --text: rgb(58, 58, 64);
+  --glass: 137, 137, 148;
+  --theme-switch-hover: rgb(255, 201, 51);
+  --background-image: url(/assets/Endless-Constellation.svg);
+
 }
 
 html {
