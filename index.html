@@ -75,13 +75,12 @@
 <!-------------------------PROJECTS--------------------------->
 
     <section>
-        <div class="flex-container">
+        <div class="flex-container intro-text">
 
           <h2>Hi. <span class="wave">👋</span> I'm Nate.</h2>
                 
             <p>As a professional chemist, I wanted to solve a real world problem
-              while learning to code. This project computes dimensional analysis 
-              calculations. Check out the video to watch it in action:
+              while learning to code. So I designed and created a dimensional analysis calculator. Check out the video to watch it in action:
             </p>
 
         </div>
@@ -214,9 +213,10 @@
 <!-------------------------EXPERIENCE--------------------------->
 
 
-    <section>
-        <h2>My Experience</h2>
+    <section class="experience-section">
+
         <div class="flex-container">
+          <h2 style="width: 100%;">My Experience</h2>
             <div class="flex-item experience">
 
                <h3>Vets Who Code Bootcamp - March 2020 Cohort</h3>
@@ -235,12 +235,18 @@
                 </ul>
 
             </div>
+
             <div class="flex-item">
-                <h3>Vets Who Code Tutorial Team Lead Volunteer</h3>
-                <p>I work with a small team to create CSS, HTML, and JavaScript tutorials for Vets Who Code students.
-                </p>
-                <p>Here's a CSS tutorial I wrote: <a href="https://github.com/nbhankes/css-tutorial">The CSS Series</a>.</p>
-            </div>
+              <h3>Open Source Contributor</h3>
+              <p>I've made open source contributions to Vets Who Code and Apollo GraphQL.</p>            
+              <p>
+                  On the Vets Who Code repo, there was an issue that the text in the header was too small and lacked contrast. You can view my pull request <a href="https://github.com/Vets-Who-Code/vets-who-code-app/pull/191">here</a>.
+              </p>    
+              <p>
+                On the Apollo GraphQL repo, there was an issue in the tutorial that led to an error. You can view my pull request <a href="https://github.com/apollographql/apollo/pull/948">here</a>.
+            </p>         
+          </div>
+
  
             <div class="flex-item">
                 <h3>Freelance WordPress Developer</h3>
@@ -255,56 +261,50 @@
                 </p>
             </div>
 
+                      
             <div class="flex-item">
-                <h3>Open Source Contributor</h3>
-                <p>I've made open source contributions to Vets Who Code and Apollo GraphQL.</p>            
-                <p>
-                    On the Vets Who Code repo, there was an issue that the text in the header was too small and lacked contrast. You can view my pull request <a href="https://github.com/Vets-Who-Code/vets-who-code-app/pull/191">here</a>.
-                </p>    
-                <p>
-                  On the Apollo GraphQL repo, there was an issue in the tutorial that led to an error. You can view my pull request <a href="https://github.com/apollographql/apollo/pull/948">here</a>.
-              </p>         
-            </div>
+              <h3>Vets Who Code Tutorial Team Lead Volunteer</h3>
+              <p>I work with a small team to create CSS, HTML, and JavaScript tutorials for Vets Who Code students.
+              </p>
+              <p>Here's a CSS tutorial I wrote: <a href="https://github.com/nbhankes/css-tutorial">The CSS Series</a>.</p>
+          </div>
+
+
     </section>
 
 <!-------------------------BLOG-POSTS--------------------------->
 
-    <section>
+    <section class="blog-section">
       <h2>Learning By Teaching</h2>
-      <h3>My DEV Blog</h3>
+      <h3 style="margin-top: 1rem; margin-bottom:1rem;"><a href="https://dev.to/nbhankes">My DEV Blog</a></h3>
            
       <div id="res"></div>
     </section>
 
 <!-------------------------CONTACT-FORM--------------------------->
 
-    <section>
-        <div class"flex-container">
-          
-              <div class="container">  
-                <form id="contact" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
+    <section class="form-section">
+      <div class"flex-container">
+        <div class="container">  
+          <form id="contact" class="gform pure-form pure-form-stacked" method="POST" data-email="example@email.net"
                 action="https://formsubmit.co/6270ed6098683397f05ade957094fe77">
-                  <h3>Let's Connect</h3>
-                  <fieldset>
-                    <input placeholder="Your name" id="name" name="name" type="text" tabindex="1" required>
-                  </fieldset>
-                  <fieldset>
-                    <input placeholder="Your Email Address" id="email" name="email" type="email" value="" tabindex="2" required>
-                    <span class="email-invalid" style="display:none">
-                      Must be a valid email address</span>
-                  </fieldset>
-                  <fieldset>
-                    <textarea placeholder="Type your message here...." id="message" name="message" tabindex="5" required></textarea>
-                  </fieldset>
-                  <fieldset>
-                    <button id="contact-submit" data-submit="...Sending">Send</button>
-                  </fieldset>
-
-                  </div>
-              
-                </form>
-              </div>          
-
+            <h3>Let's Connect</h3>
+            <fieldset>
+              <input placeholder="Your name" id="name" name="name" type="text" tabindex="1" required>
+            </fieldset>
+            <fieldset>
+              <input placeholder="Your Email Address" id="email" name="email" type="email" value="" tabindex="2" required>
+              <span class="email-invalid" style="display:none">
+                Must be a valid email address</span>
+            </fieldset>
+            <fieldset>
+              <textarea placeholder="Type your message here...." id="message" name="message" tabindex="5" required></textarea>
+            </fieldset>
+            <fieldset>
+              <button id="contact-submit" data-submit="...Sending">Send</button>
+            </fieldset>  
+          </form>
+        </div>          
       </div>
     </section>
 

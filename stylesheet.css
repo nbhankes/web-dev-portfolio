@@ -140,7 +140,7 @@ button:hover {
 .flex-item {
   overflow: auto;
   background-color: rgba(var(--glass), 0.4);
-  margin: var(--text-2) auto;
+  margin: var(--text-4) auto;
   padding: var(--text-2) var(--text-2);
   border-radius: 5px;
   max-width: 500px;
@@ -211,6 +211,10 @@ a:hover {
 /***********************  Screen 1 - Projects ************************/
 /*********************************************************************/
 
+.intro-text {
+  margin-bottom: 2rem;
+}
+
 .iframe-container {
   position: relative;
   padding-bottom: 49.25%;
@@ -278,6 +282,10 @@ em {
 /*************************** Screen 2 - Experience **************************/
 /****************************************************************************/
 
+.experience-section {
+  margin-top: 7rem;
+}
+
 .hashflag {
   opacity: 0.4;
   z-index: -1;
@@ -305,8 +313,12 @@ em {
 /*************************** BLOG CARDS **************************/
 /*************************************************************/
 
+.blog-section {
+  margin-top: 7rem;
+}
+
 .small {
-  margin: var(--text-1) 5%;
+  margin: var(--text-4) 5%;
 }
 
 .blog-container {
@@ -458,6 +470,11 @@ em {
 
 /*********************** Contact Form **********************/
 /***********************************************************/
+
+.form-section {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+}
 
 .container #contact {
   margin: 0 auto;
