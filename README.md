@@ -1,6 +1,6 @@
 ## 👋
 
-Welcome to this repository.
+Welcome to this repository. You can see it live at www.nbhankes.dev
 
 I built this website with HTML, CSS, and JavaScript.
 
